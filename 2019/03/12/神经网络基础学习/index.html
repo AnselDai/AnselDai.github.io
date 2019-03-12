@@ -11,7 +11,7 @@
 
     <title>
         
-        Daixinle的博客 | Dai&#39;s Blog
+        神经网络基础学习 - Daixinle的博客 | Dai&#39;s Blog
         
     </title>
 
@@ -65,7 +65,7 @@
                     <span>标签</span>
                 </a>
             </li>
-            <li class="active">
+            <li>
                 <a href="/archive">
                     <i class="iconfont icon-guidang2"></i>
                     <span>存档</span>
@@ -87,6 +87,10 @@
             
         </ul>
     </div>
+    
+        <div id="toc" class="toc-article">
+    
+</div>
     
 </div>
 
@@ -113,35 +117,52 @@
         
 
 
-<!-- 归档列表 -->
+<div class="post-container">
+    <div class="post-title">
+        神经网络基础学习
+    </div>
 
-<div class="archives-container">
-
-<div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2019">
-                    <span class="tag-text">2019</span>
-                </span>
-    <ul>
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2019-03-12 02:03:20</span></span>
         
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li>
-            <span>03-12</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2019/03/12/神经网络基础学习/">
-                        <span>
-                            神经网络基础学习
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
+        <span class="attr">标签：/
         
+        <a class="tag" href="/tags/#机器学习" title="机器学习">机器学习</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#人工智能" title="人工智能">人工智能</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#入门知识" title="入门知识">入门知识</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#数学相关" title="数学相关">数学相关</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
 
-    </ul>
-</div>
+    </div>
+    <div class="post-content ">
+        <blockquote>
+<p>参考学习的博客：<a href="https://blog.csdn.net/lyl771857509/article/details/78990215" target="_blank" rel="noopener">【深度学习】神经网络入门</a></p>
+</blockquote>
+<ul>
+<li><font size="5" face="黑体"><b>人工神经网络登场的前景</b></font><br><font size="4" face="黑体"><br>  假设我们有0.14，0.57，01.29，3.57，5.14这5个点，那么第7个是多少？一眼看上去好像看不出来，假如画个图拟合一下，我们可以看到：<br><br>  <img src="1.png" alt><br><br>  这样我们可以清楚看到，下一个是7。但是，计算机并不会这样画线，所以需要拟合。<br>  这就是回归（曲线拟合）问题。<br>  从最简单的方法开始：<br><br>  <img src="2.png" alt><br><br>  我们初始化一条直线 y=kx+b,然后不断旋转平移调整它，直到它的误差达到最小或者小于某个值（如0.00001）便停止旋转。这就是<b>梯度下降法（Gradient Descent）</b><br>  计算误差，我们用的是最小二乘法。到这里，好像就解决问题了，但是上面那仅仅适用于直线。所以我们需要更加普适的方法。<br>  我们知道，误差的计算：$误差=（）^2$<br></font></li>
+</ul>
 
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
 </div>
 
     </div>
@@ -226,7 +247,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
