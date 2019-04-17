@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Daixinle的博客">
+    <meta name="keyword" content="IT">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        系统分析第六周作业 - Daixinle的博客 | Dai&#39;s Blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> Recording my study </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>Xinle Dai</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archive">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简答题"><span class="toc-text">简答题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#建模练习题（用例模型）"><span class="toc-text">建模练习题（用例模型）</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i> Recording my study </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        系统分析第六周作业
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2019-04-17 09:59:28</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#系统分析作业" title="系统分析作业">系统分析作业</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h2 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h2><ol>
+<li><p><b>用例的概念</b><br>&emsp;&emsp;&emsp;用例是一个和项目是否成功有关的场景的集合，这些场景描述了使用者来使用系统来达到目的的过程。用例是文档，而不是图表，所以，用例建模住主要是书写文档，而不是画图。</p>
+</li>
+<li><p><b>用例和场景的关系？什么是主场景或 happy path？</b><br>&emsp;&emsp;&emsp;用例是一系列场景的集合。主场景对应着系统最主要的对话，通常都是这个系统的成功的场景，它是最常用的，能够直接实现用户目标的场景。</p>
+</li>
+<li><p><b>用例有哪些形式？</b><br>&emsp;&emsp;&emsp;1. 简短格式<br>&emsp;&emsp;&emsp;&emsp;&emsp;通常只包含主场景，在最开始的需求分析时候创建<br>&emsp;&emsp;&emsp;2. 简便格式<br>&emsp;&emsp;&emsp;&emsp;&emsp;一种不正式的格式，许多的图表涵盖了许多种场景<br>&emsp;&emsp;&emsp;3. 完全格式<br>&emsp;&emsp;&emsp;&emsp;&emsp;详细描述了所有的步骤和变量以及先决条件，成功保证等，在编写了简短格式的用例之后，经过迭代得到完全格式的用例</p>
+</li>
+<li><p><b>对于复杂业务，为什么编制完整用例非常难？</b><br>&emsp;&emsp;&emsp;用例结构化地，深入地展示了业务的许多细节，复杂业务的很多场景很复杂，甚至不明确，这对于编写完整的用例来说存在困难。</p>
+</li>
+<li><p><b>什么是用例图？</b><br>&emsp;&emsp;&emsp;用例图是对系统上下文的描述，可以展示系统的边界，系统的使用方法，可以作为一个交流工具概况系统及其参与者的行为等。</p>
+</li>
+<li><p><b>用例图的基本符号与元素？</b><br><img src="Usecase.png" alt></p>
+</li>
+<li><p><b>用例图的画法与步骤</b><br>&emsp;&emsp;&emsp;1. 确定系统的边界，然后画出系统框架并写上系统名字<br>&emsp;&emsp;&emsp;2. 确定参与者，主要参与者在左边，支持性参与者在右边<br>&emsp;&emsp;&emsp;3. 确定参与者之间的关系<br>&emsp;&emsp;&emsp;4. 根据需求识别和创作用例<br>&emsp;&emsp;&emsp;5. 确认用例与参与者之间的关系<br>&emsp;&emsp;&emsp;6. 将用例画在系统中，ruo涉及其他子系统，则将子系统放在右边</p>
+</li>
+</ol>
+<ol start="8">
+<li><b>用例图给利益相关人与开发者的价值有哪些？</b><br>&emsp;&emsp;&emsp;1. 相关人员可以直观看到系统的基本框架<br>&emsp;&emsp;&emsp;2. 有利于开发最后的整合<br>&emsp;&emsp;&emsp;3. 方便设计人员和开发人员之间的交流</li>
+</ol>
+<h2 id="建模练习题（用例模型）"><a href="#建模练习题（用例模型）" class="headerlink" title="建模练习题（用例模型）"></a>建模练习题（用例模型）</h2><ol>
+<li><p><b>选择2-3个你熟悉的类似业务的在线服务系统（或移动 APP），如定旅馆（携程、去哪儿等）、定电影票、背单词APP等，分别绘制它们用例图。并满足以下要求：<br>&emsp;&emsp;&emsp;1. 请使用用户的视角，描述用户目标或系统提供的服务<br>&emsp;&emsp;&emsp;2. 粒度达到子用例级别，并用 include 和 exclude 关联它们<br>&emsp;&emsp;&emsp;3. 请用色彩标注出你认为创新（区别于竞争对手的）用例或子用例<br>&emsp;&emsp;&emsp;4. 尽可能识别外部系统和服务</b><br><img src="Ctrip.png" alt><br><img src="Maoyan.png" alt></p>
+</li>
+<li><p><b>然后，回答下列问题：<br>&emsp;&emsp;&emsp;1. 为什么相似系统的用例图是相似的？</b><br>&emsp;&emsp;&emsp;&emsp;因为相似系统的业务是相似的，所以用例图也是相似的。<br>&emsp;&emsp;&emsp;<b>2. 如果是定旅馆业务，请对比 Asg_RH 用例图，简述如何利用不同时代、不同地区产品的用例图，展现、突出创新业务和技术</b><br>&emsp;&emsp;&emsp;&emsp;可以参考早期的产品，发掘它的优点加以借鉴，同时找到用户使用该早期产品时体验不好的地方以及它的用例图不合理的地方，然后结合市场调研的结果，在我们的产品上进行改进创新，同时通过一次次迭代，完善我们的产品的创新点。<br>&emsp;&emsp;&emsp;<b>3. 如何利用用例图定位创新思路（业务创新、或技术创新、或商业模式创新）在系统中的作用</b><br>&emsp;&emsp;&emsp;&emsp;用不同颜色的图例来突出创新点<br>&emsp;&emsp;&emsp;<b>4. 请使用 SCRUM 方法，选择一个用例图，编制某定旅馆开发的需求（backlog）开发计划表</b></p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">Title</th>
+<th style="text-align:center">Imp</th>
+<th style="text-align:center">Est</th>
+<th style="text-align:left">How to Demo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">查找酒店</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">30</td>
+<td style="text-align:left">根据位置查找酒店</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">预订酒店</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">20</td>
+<td style="text-align:left">预定需要的酒店</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">查询</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">20</td>
+<td style="text-align:left">根据名字，位置等信息查找酒店</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">支付</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">10</td>
+<td style="text-align:left">支付订单</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">管理账单</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">15</td>
+<td style="text-align:left">管理已支付订单</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">管理账户</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">10</td>
+<td style="text-align:left">管理自己的账户信息</td>
+</tr>
+</tbody>
+</table>
+<p>&emsp;&emsp;&emsp;5. <b>根据任务4，参考 使用用例点估算软件成本，给出项目用例点的估算</b></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">用例</th>
+<th style="text-align:center">事务</th>
+<th style="text-align:center">计算</th>
+<th style="text-align:center">权重</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">查找酒店</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">平均</td>
+</tr>
+<tr>
+<td style="text-align:center">预订酒店</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">重要</td>
+</tr>
+<tr>
+<td style="text-align:center">查询</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">重要</td>
+</tr>
+<tr>
+<td style="text-align:center">支付</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">简单</td>
+</tr>
+<tr>
+<td style="text-align:center">管理账单</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">重要</td>
+</tr>
+<tr>
+<td style="text-align:center">管理账户</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">简单</td>
+</tr>
+</tbody>
+</table>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+        <li>
+            <a target="_blank" href="https://www.zhihu.com/people/dai-xin-le-79/activities">
+                            <span class="fa-stack fa-lg">
+                                 <i class="iconfont icon-zhihu"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank" href="https://github.com/AnselDai">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank" href="https://www.linkedin.com/in/馨乐-戴-a32756159">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-linkedin"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+    </ul>
+    
+    <p>
+        <span>/</span>
+        
+    </p>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
