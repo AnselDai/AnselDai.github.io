@@ -152,8 +152,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.figure(num = <span class="number">1</span>, figsize=(<span class="number">8</span>,<span class="number">5</span>)) <span class="comment"># 定义窗口编号为1，大小为(8,5)</span></span><br><span class="line">plt.plot(x, y, color=<span class="string">'red'</span>, linewidth=<span class="number">1.0</span>, linestyle=<span class="string">'--'</span>) <span class="comment"># 颜色为红色，线宽度为1.0，曲线类型为虚线</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 <p><img src="2.png" alt></p>
 </li>
-<li><font size="5" face="黑体"><b>设置坐标轴</b></font><br>
-<font size="4" face="黑体">1. 限制坐标轴的范围</font>
+<li><font size="5" face="黑体"><b>设置坐标轴</b></font><br><br><font size="4" face="黑体">1. 限制坐标轴的范围</font>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.xlim((<span class="number">-1</span>, <span class="number">2</span>)) <span class="comment"># 修改x轴</span></span><br><span class="line">plt.ylim((<span class="number">-2</span>, <span class="number">3</span>)) <span class="comment"># 修改y轴</span></span><br></pre></td></tr></table></figure>
 <p><img src="3.png" alt><br></p>
@@ -161,98 +160,37 @@
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.xlabel(<span class="string">'x label'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'y label'</span>)</span><br></pre></td></tr></table></figure>
 <p><img src="4.png" alt><br></p>
-<font size="4" face="黑体">3. 自定义坐标轴的单位间隔以及内容</font>
-<ul>
-  <li>使用新的区间以及单位间隔来替换</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">new_tick = np.linspace(<span class="number">-2</span>, <span class="number">4</span>, <span class="number">5</span>) <span class="comment"># 新建一个区间[-2,4]，一共显示5个坐标</span></span><br><span class="line">plt.xticks(new_tick)</span><br></pre></td></tr></table></figure>
-
-![](5.png)
-<ul>
-  <li>自定义任意间隔和内容的坐标轴</li>
-</ul>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># [-2, -1.8, -1, 1.22, 3]表示在坐标轴上显示的位置</span></span><br><span class="line"><span class="comment"># [r'$really\ bad$', r'$bad$', r'$normal$', r'$really\ good$']表示对应位置显示的内容</span></span><br><span class="line"><span class="comment"># 这里用了正则表达式，可以用来表示更多内容以及更多种数学符号</span></span><br><span class="line">plt.yticks([<span class="number">-2</span>, <span class="number">-1.8</span>, <span class="number">-1</span>, <span class="number">1.22</span>, <span class="number">3</span>], [<span class="string">r'$really\ bad$'</span>, <span class="string">r'$bad$'</span>, <span class="string">r'$normal$'</span>, <span class="string">r'$good$'</span>, <span class="string">r'$really\ good$'</span>])</span><br></pre></td></tr></table></figure>
-
-![](6.png)<br>
-<font size="4" face="黑体">4. 去掉不想要的边框<br>$ \ \ \ \  $例如，这里我们不想要上面和右边这两条边框，那么怎么去掉？</font>
-![](7.png)<br>
-<font size="4" face="黑体">$ \ \ \ \  $解决方法就是：将不想要的边框的颜色设置为'none'</font>
+<font size="4" face="黑体">3. 自定义坐标轴的单位间隔以及内容</font><br><ul><br>  <li>使用新的区间以及单位间隔来替换</li><br></ul><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">new_tick = np.linspace(<span class="number">-2</span>, <span class="number">4</span>, <span class="number">5</span>) <span class="comment"># 新建一个区间[-2,4]，一共显示5个坐标</span></span><br><span class="line">plt.xticks(new_tick)</span><br></pre></td></tr></table></figure><br><br><img src="5.png" alt><br><ul><br>  <li>自定义任意间隔和内容的坐标轴</li><br></ul><br><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># [-2, -1.8, -1, 1.22, 3]表示在坐标轴上显示的位置</span></span><br><span class="line"><span class="comment"># [r'$really\ bad$', r'$bad$', r'$normal$', r'$really\ good$']表示对应位置显示的内容</span></span><br><span class="line"><span class="comment"># 这里用了正则表达式，可以用来表示更多内容以及更多种数学符号</span></span><br><span class="line">plt.yticks([<span class="number">-2</span>, <span class="number">-1.8</span>, <span class="number">-1</span>, <span class="number">1.22</span>, <span class="number">3</span>], [<span class="string">r'$really\ bad$'</span>, <span class="string">r'$bad$'</span>, <span class="string">r'$normal$'</span>, <span class="string">r'$good$'</span>, <span class="string">r'$really\ good$'</span>])</span><br></pre></td></tr></table></figure><br><br><img src="6.png" alt><br><br><font size="4" face="黑体">4. 去掉不想要的边框<br>$ \ \ \ \  $例如，这里我们不想要上面和右边这两条边框，那么怎么去掉？</font><br><img src="7.png" alt><br><br><font size="4" face="黑体">$ \ \ \ \  $解决方法就是：将不想要的边框的颜色设置为’none’</font>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ax = plt.gca() <span class="comment"># 获取当前的坐标轴的信息</span></span><br><span class="line">ax.spines[<span class="string">'right'</span>].set_color(<span class="string">'none'</span>) <span class="comment"># 设置右边的边框</span></span><br><span class="line">ax.spines[<span class="string">'top'</span>].set_color(<span class="string">'none'</span>)   <span class="comment"># 设置上面的边框</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 <p><img src="8.png" alt><br></p>
-<font size="4" face="黑体">$ \ \ \ \  $可以看到，上面和右边那两个边框被去掉了</font>
-<font size="4" face="黑体">5. 调整坐标轴</font>
+<font size="4" face="黑体">$ \ \ \ \  $可以看到，上面和右边那两个边框被去掉了</font><br><font size="4" face="黑体">5. 调整坐标轴</font>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置x坐标</span></span><br><span class="line">ax.xaxis.set_ticks_position(<span class="string">'bottom'</span>) <span class="comment"># 设置底部的x坐标</span></span><br><span class="line">ax.spines[<span class="string">'bottom'</span>].set_position((<span class="string">'data'</span>, <span class="number">0</span>)) <span class="comment"># 将x坐标移动到y=0的位置</span></span><br></pre></td></tr></table></figure>
 <p><img src="9.png" alt></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ax.yaxis.set_ticks_position(<span class="string">'left'</span>) <span class="comment"># 设置坐标的y坐标轴</span></span><br><span class="line">ax.spines[<span class="string">'left'</span>].set_position((<span class="string">'data'</span>, <span class="number">0</span>)) <span class="comment"># 将y坐标轴移动到x=0的位置</span></span><br></pre></td></tr></table></figure>
 <p><img src="10.png" alt></p>
 </li>
-<li><font size="5" face="黑体"><b>Legend图例</b></font>
-<font size="4" face="黑体">
-为了方便说明，这里我们画2条曲线，一条函数为$ y = 2*x + 1 $，另外一条为$ y = x^2 $，绘制方法在前面已经说明了，如下：<br>
-![](11.png)<br>
-<font size="4" face="黑体">下面我们想要添加图例来标注这两条线段</font>
+<li><font size="5" face="黑体"><b>Legend图例</b></font><br><font size="4" face="黑体"><br>为了方便说明，这里我们画2条曲线，一条函数为$ y = 2*x + 1 $，另外一条为$ y = x^2 $，绘制方法在前面已经说明了，如下：<br><br><img src="11.png" alt><br><br><font size="4" face="黑体">下面我们想要添加图例来标注这两条线段</font>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 需要获取红色线段和抛物线的对象</span></span><br><span class="line"><span class="comment"># a, = function() 表示function()会返回多个返回值，但是只拿第一个赋值给a</span></span><br><span class="line"><span class="comment"># 特别注意这里的label，是可以显示在legend上面的</span></span><br><span class="line">line,  = plt.plot(x, y1, color=<span class="string">'red'</span>, linewidth=<span class="number">1.0</span>, linestyle=<span class="string">'--'</span>, label=<span class="string">'red line'</span>)</span><br><span class="line">circle, = plt.plot(x, y2, color=<span class="string">'blue'</span>, linewidth=<span class="number">2.0</span>, label=<span class="string">'blue line'</span>)</span><br><span class="line"><span class="comment"># 然后根据label自动生成图例</span></span><br><span class="line">plt.legend(loc=<span class="string">'upper right'</span>)</span><br></pre></td></tr></table></figure>
 <p><img src="12.png" alt></p>
-<font>假如我们还想对图例进行进一步自定义的控制，如多个线有label，但是我只想显示其中一两条，然而自动生成的图例会生成所有带label的线的图例，而且，还可以根据自己的喜好重新命名而不用理会原有的label
-</font>
+<font>假如我们还想对图例进行进一步自定义的控制，如多个线有label，但是我只想显示其中一两条，然而自动生成的图例会生成所有带label的线的图例，而且，还可以根据自己的喜好重新命名而不用理会原有的label<br></font>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># handlers：需要添加进去图例的线段的实例</span></span><br><span class="line"><span class="comment"># labels：这些实例对应的label，自定义的</span></span><br><span class="line"><span class="comment"># loc：位置，这里是右上方</span></span><br><span class="line">plt.legend(handles=[line, circle], labels=[<span class="string">'my red line'</span>, <span class="string">'my_blue_line'</span>], loc=<span class="string">'upper right'</span>)</span><br></pre></td></tr></table></figure>
 <p><img src="13.png" alt><br></p>
-<font size="4" face="黑体">
-另外，loc参数如下：
-其中，'best'代表自动分配最佳位置，尽量不遮挡原图形
-<ul>
- <li>'best'</li>
- <li>'upper right'</li>
- <li>'upper left'</li>
- <li>'lower left'</li>
- <li>'lower right'</li>
- <li>'right'</li>
- <li>'center left'</li>
- <li>'center right'</li>
- <li>'lower center'</li>
- <li>'upper center'</li>
- <li>'center'</li>
-</ul>
-</font></font></li>
-<li><font size="5" face="黑体"><b>Annotation标注</b></font>
-<font size="4" face="黑体">原始图像：</font>
-![](14.png)<br>
-<font size="4" face="黑体">1. 画垂直的虚线</font>
-<font size="4" face="黑体">$ \ \ \ \  $比如，这里我们想做一个如下的标注：</font>
-![](15.png)<br>
-<font size="4" face="黑体">$ \ \ \ \  $我们可以看到，这种标记其实还是用了前面的知识，这里我们需要一个垂直的虚线以及$ \ \ \ \  $在直线上的一个点，实现如下：</font>
+<font size="4" face="黑体"><br>另外，loc参数如下：<br>其中，’best’代表自动分配最佳位置，尽量不遮挡原图形<br><ul><br> <li>‘best’</li><br> <li>‘upper right’</li><br> <li>‘upper left’</li><br> <li>‘lower left’</li><br> <li>‘lower right’</li><br> <li>‘right’</li><br> <li>‘center left’</li><br> <li>‘center right’</li><br> <li>‘lower center’</li><br> <li>‘upper center’</li><br> <li>‘center’</li><br></ul><br></font></font></li>
+<li><font size="5" face="黑体"><b>Annotation标注</b></font><br><font size="4" face="黑体">原始图像：</font><br><img src="14.png" alt><br><br><font size="4" face="黑体">1. 画垂直的虚线</font><br><font size="4" face="黑体">$ \ \ \ \  $比如，这里我们想做一个如下的标注：</font><br><img src="15.png" alt><br><br><font size="4" face="黑体">$ \ \ \ \  $我们可以看到，这种标记其实还是用了前面的知识，这里我们需要一个垂直的虚线以及$ \ \ \ \  $在直线上的一个点，实现如下：</font>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x0 = <span class="number">1</span></span><br><span class="line">y0 = <span class="number">2</span>*x0 + <span class="number">1</span></span><br><span class="line">plt.plot([x0, x0], [<span class="number">0</span>, y0], <span class="string">'k--'</span>, linewidth=<span class="number">2.5</span>) <span class="comment"># 画线</span></span><br><span class="line"><span class="comment"># 表示x的范围从x0~x0；y的范围为0~y0；'k--'表示黑色的虚线，k为黑色，--为虚线；</span></span><br><span class="line">plt.scatter(<span class="number">1</span>, <span class="number">1</span>*<span class="number">2</span>+<span class="number">1</span>, s=<span class="number">50</span>) <span class="comment"># 画点</span></span><br></pre></td></tr></table></figure>
 <p><br><br><font size="4" face="黑体">2. 添加标注的两种方法</font></p>
 <pre><code>&lt;font size=4 face=&quot;黑体&quot;&gt;$ \ \ \ \ $1. 使用annotate进行标注&lt;/font&gt;
 </code></pre>  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">plt.annotate(</span><br><span class="line">                  <span class="string">r'$2x+1=%s$'</span>%y0, xy=(x0, y0), xycoords=<span class="string">'data'</span>, xytext=(+<span class="number">30</span>, <span class="number">-30</span>), </span><br><span class="line">                  textcoords=<span class="string">'offset points'</span>, fontsize=<span class="number">16</span>, </span><br><span class="line">                  arrowprops=dict(arrowstyle=<span class="string">'-&gt;'</span>, connectionstyle=<span class="string">'arc3, rad=0.2'</span>)</span><br><span class="line">                  )</span><br></pre></td></tr></table></figure>
-<p><img src="16.png" alt><br><br><font size="4" face="黑体"><br>$     $参数解释：<br>$         $1. ‘….’：要标注上去的text，这里是2x+1=3<br>$         $2. xy=(x0,y0)：要标注的点的坐标<br>$         $3. xycoords=’data’：使用我们data的坐标系<br>$         $4. xytext=(-30,30)：text要展示的左上角的坐标<br>$         $5. textcoords=’offset points’：标注文字的坐标系是根据要标注的点的位移，比如这$            $里就是那个点(x0+30, y0-30)的位置<br>$         $6. fontsize：字体大小<br>$         $7. arrowprops：箭头的参数。用一个字典dict来表示<br>$              $7-1. arrowstyle：箭头的样式，’-&gt;表示箭头’<br>$              $7-2. connectionstyle：指向标注点的样子，是直线，弧线等等。arc3表示弧线，$                                                   $rad=0.2表示角度为0.2弧度
-</font><br><font size="4" face="黑体">$     $2. 使用text进行标注</font></p>
+<p><img src="16.png" alt><br><br><font size="4" face="黑体"><br>$ \ \ \ \ $参数解释：<br>$ \ \ \ \ \ \ \ \ $1. ‘….’：要标注上去的text，这里是2x+1=3<br>$ \ \ \ \ \ \ \ \ $2. xy=(x0,y0)：要标注的点的坐标<br>$ \ \ \ \ \ \ \ \ $3. xycoords=’data’：使用我们data的坐标系<br>$ \ \ \ \ \ \ \ \ $4. xytext=(-30,30)：text要展示的左上角的坐标<br>$ \ \ \ \ \ \ \ \ $5. textcoords=’offset points’：标注文字的坐标系是根据要标注的点的位移，比如这$\ \ \ \ \ \ \ \ \ \ \ \ $里就是那个点(x0+30, y0-30)的位置<br>$ \ \ \ \ \ \ \ \ $6. fontsize：字体大小<br>$ \ \ \ \ \ \ \ \ $7. arrowprops：箭头的参数。用一个字典dict来表示<br>$ \ \ \ \ \ \ \ \ \ \ \ \  $7-1. arrowstyle：箭头的样式，’-&gt;表示箭头’<br>$ \ \ \ \ \ \ \ \ \ \ \ \  $7-2. connectionstyle：指向标注点的样子，是直线，弧线等等。arc3表示弧线，$\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ $rad=0.2表示角度为0.2弧度<br></font><br><font size="4" face="黑体">$ \ \ \ \ $2. 使用text进行标注</font></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.text(<span class="number">-3.7</span>, <span class="number">3</span>, <span class="string">r'$This\ is\ an\ annotion.\ \mu\sigma_i\alpha_j$'</span>, fontdict=&#123;<span class="string">'size: 16'</span>, <span class="string">'color'</span>: <span class="string">'red'</span>&#125;)</span><br></pre></td></tr></table></figure>
-<p><img src="17.png" alt><br><br><font size="4" face="黑体"><br>$     $参数解释：<br>$         $1. -3.7：标注的x坐标<br>$         $2. 3：标注的y坐标<br>$         $3. text：标注的内容，正则表达式<br>$         $4. text的样式，是一个字典，可以有size，color等等
-</font><br></p>
+<p><img src="17.png" alt><br><br><font size="4" face="黑体"><br>$ \ \ \ \ $参数解释：<br>$ \ \ \ \ \ \ \ \ $1. -3.7：标注的x坐标<br>$ \ \ \ \ \ \ \ \ $2. 3：标注的y坐标<br>$ \ \ \ \ \ \ \ \ $3. text：标注的内容，正则表达式<br>$ \ \ \ \ \ \ \ \ $4. text的样式，是一个字典，可以有size，color等等<br></font><br></p>
 </li>
-<li><font size="5" face="黑体"><b>tick能见度</b></font>
-<font size="4" face="黑体">
-首先，我们画了一个这样的图像：
-![](18.png)<br>
-可以看到图像和坐标轴之间是有遮挡的，我们可以设置x，y的透明度来使得x，y轴清晰，遮挡没那么严重
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment"># 通过ax.get_xticklabels()和ax.get_yticklabels()来获取x，y坐标轴的标记</span></span><br><span class="line"> <span class="keyword">for</span> label <span class="keyword">in</span> ax.get_xticklabels() + ax.get_yticklabels():</span><br><span class="line"> 	label.set_fontsize(<span class="number">12</span>) <span class="comment"># 设置坐标轴标记的大小</span></span><br><span class="line">label.set_bbox(dict(facecolor=<span class="string">'white'</span>, edgecolor=<span class="string">'None'</span>, alpha=<span class="number">0.7</span>, zorder=<span class="number">2</span>)) <span class="comment"># 设置坐标轴标记的bbox（透明度等属性）</span></span><br></pre></td></tr></table></figure>
-
-![](19.png)<br>
-<font size="4" face="黑体">
-$ \ \ \ \ $set_bbox参数中的字典内容解释：
-$ \ \ \ \ \ \ \ \ $1. facecolor：前景色
-$ \ \ \ \ \ \ \ \ $2. edgecolor：边框颜色，这里是'None'，即无边框
-$ \ \ \ \ \ \ \ \ $3. alpha：透明度
-$ \ \ \ \ \ \ \ \ $4. zorder：层叠顺序，默认zorder为1，这里设置为2，则可以显示在线段上面
-</font><br>
-</font></li>
+<li><font size="5" face="黑体"><b>tick能见度</b></font><br><font size="4" face="黑体"><br>首先，我们画了一个这样的图像：<br><img src="18.png" alt><br><br>可以看到图像和坐标轴之间是有遮挡的，我们可以设置x，y的透明度来使得x，y轴清晰，遮挡没那么严重<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment"># 通过ax.get_xticklabels()和ax.get_yticklabels()来获取x，y坐标轴的标记</span></span><br><span class="line"> <span class="keyword">for</span> label <span class="keyword">in</span> ax.get_xticklabels() + ax.get_yticklabels():</span><br><span class="line"> 	label.set_fontsize(<span class="number">12</span>) <span class="comment"># 设置坐标轴标记的大小</span></span><br><span class="line">label.set_bbox(dict(facecolor=<span class="string">'white'</span>, edgecolor=<span class="string">'None'</span>, alpha=<span class="number">0.7</span>, zorder=<span class="number">2</span>)) <span class="comment"># 设置坐标轴标记的bbox（透明度等属性）</span></span><br></pre></td></tr></table></figure><br><br><img src="19.png" alt><br><br><font size="4" face="黑体"><br>$ \ \ \ \ $set_bbox参数中的字典内容解释：<br>$ \ \ \ \ \ \ \ \ $1. facecolor：前景色<br>$ \ \ \ \ \ \ \ \ $2. edgecolor：边框颜色，这里是’None’，即无边框<br>$ \ \ \ \ \ \ \ \ $3. alpha：透明度<br>$ \ \ \ \ \ \ \ \ $4. zorder：层叠顺序，默认zorder为1，这里设置为2，则可以显示在线段上面<br></font><br><br></font></li>
 </ul>
 
         
