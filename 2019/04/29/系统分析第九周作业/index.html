@@ -11,7 +11,7 @@
 
     <title>
         
-        Daixinle的博客 | Dai&#39;s Blog
+        系统分析第九周作业 - Daixinle的博客 | Dai&#39;s Blog
         
     </title>
 
@@ -53,7 +53,7 @@
     </div>
     <div class="contents" id="nav-content">
         <ul>
-            <li class="active">
+            <li>
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
                     <span>主页</span>
@@ -88,6 +88,10 @@
         </ul>
     </div>
     
+        <div id="toc" class="toc-article">
+    
+</div>
+    
 </div>
 
 
@@ -111,83 +115,43 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-<div class="post-preview-container" style="min-height: 576px">
-    
-    <div class="post-preview">
-        <div class="post-time">2019-03-14</div>
-        <div class="post-info">
-            <a href="/2019/03/14/Matplotlib画图/">
-                <h3>
-                    Matplotlib画图
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
+
+
+<div class="post-container">
+    <div class="post-title">
+        系统分析第九周作业
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2019-03-14</div>
-        <div class="post-info">
-            <a href="/2019/03/14/Matplotlib的基本使用/">
-                <h3>
-                    Matplotlib的基本使用
-                </h3>
-            </a>
-            <p>
-                
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#python" title="python">python</a>
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#matplotlib" title="matplotlib">matplotlib</a>
-                <span>/</span>
-                
-                
-            </p>
-        </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2019-04-29 15:26:20</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#系统分析作业" title="系统分析作业">系统分析作业</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2019-03-12</div>
-        <div class="post-info">
-            <a href="/2019/03/12/神经网络基础学习/">
-                <h3>
-                    神经网络基础学习
-                </h3>
-            </a>
-            <p>
-                
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#机器学习" title="机器学习">机器学习</a>
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#人工智能" title="人工智能">人工智能</a>
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#入门知识" title="入门知识">入门知识</a>
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#数学相关" title="数学相关">数学相关</a>
-                <span>/</span>
-                
-                
-            </p>
+    <div class="post-content ">
+        <p><br></p>
+<font size="4" face="黑体"><b>使用类图，分别对 Asg_RH 文档中 Make Reservation 用例以及 Payment 用例开展领域建模。然后，根据上述模型，给出建议的数据表以及主要字段，特别是主键和外键</b></font><br><br><font size="4" face="黑体"><br>1. Make Reservation<br>&emsp;&emsp;<img src="1.png" alt><br><br>    <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">Customer</span><span class="params">(ID/KEY, name, address)</span></span></span><br><span class="line"><span class="function"><span class="title">ReservationList</span><span class="params">(ID/KEY, CID/FKEY)</span></span></span><br><span class="line"><span class="function"><span class="title">ReservationItem</span><span class="params">(ID/KEY, LID/FKEY, RID/FKEY, checkindate, checkoutdate, numofnights, numofrooms, numofadults, numofchildren, ageofchildren, price)</span></span></span><br><span class="line"><span class="function"><span class="title">Room</span><span class="params">(ID/KEY, DID/FKEY, HID/FKEY, type, availability)</span></span></span><br><span class="line"><span class="function"><span class="title">RoomDescription</span><span class="params">(ID/KEY, detail, price)</span></span></span><br><span class="line"><span class="function"><span class="title">Hotel</span><span class="params">(ID/KEY, CID/FKEY, name, address)</span></span></span><br><span class="line"><span class="function"><span class="title">City</span><span class="params">(ID/KEY, name)</span></span></span><br></pre></td></tr></table></figure><br><br>2. Payment<br>&emsp;&emsp;<img src="2.png" alt><br><br>    <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">ReservationItem</span><span class="params">(ID/KEY, LID/FKEY, RID/FKEY, checkindate, checkoutdate, numofnights, numofrooms, numofadults, numofchildren, ageofchildren, price)</span></span></span><br><span class="line"><span class="function"><span class="title">PaymentItem</span><span class="params">(ID/KEY, RID/FKEY, CardID/FKEY, price)</span></span></span><br><span class="line"><span class="function"><span class="title">CreditCard</span><span class="params">(ID/KEY, number, securitycode, expirydate)</span></span></span><br><span class="line"><span class="function"><span class="title">CreditCardOwner</span><span class="params">(ID/KEY, CardID/FKEY, TID/FKEY, CountryID/FKEY, CityID/FKEY, firstname, lastname, address1, address2)</span></span></span><br><span class="line"><span class="function"><span class="title">Title</span><span class="params">(ID/KEY, details)</span></span></span><br><span class="line"><span class="function"><span class="title">City</span><span class="params">(ID/KEY, name)</span></span></span><br><span class="line"><span class="function"><span class="title">Country</span><span class="params">(ID/KEY, name)</span></span></span><br></pre></td></tr></table></figure><br><br><br></font><br><font size="4" face="黑体"><b>使用 UML State Model，对每个订单对象生命周期建模<br>建模对象： 参考 Asg_RH 文档， 对 Reservation/Order 对象建模。<br>建模要求： 参考练习不能提供足够信息帮助你对订单对象建模，请参考现在 定旅馆 的旅游网站，尽可能分析围绕订单发生的各种情况，直到订单通过销售事件（柜台销售）结束订单。</b></font><br><font size="4" face="黑体"><br>参考携程网<br><img src="3.png" alt><br></font>
+
+
+        
+        <br>
+        <div id="comment-container">
         </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
     </div>
-    
 </div>
-<ul class="pager">
-    
-    <li class="previous">
-        <a href="/">&larr; Newer Posts</a>
-    </li>
-    
-    
-</ul>
 
     </div>
 </div>
@@ -271,7 +235,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
